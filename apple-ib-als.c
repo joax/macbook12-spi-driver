@@ -465,7 +465,7 @@ static void appleals_config_sensor(struct appleals_device *als_dev,
 
 static int appleals_config_iio(struct appleals_device *als_dev)
 {
-	struct iio_dev *iio_dev = iio_priv_to_dev(als_dev);
+	struct iio_dev *iio_dev = als_dev->iio_dev;
 	struct iio_trigger *iio_trig;
 	struct device *parent = &als_dev->hid_dev->dev;
 	int rc;
